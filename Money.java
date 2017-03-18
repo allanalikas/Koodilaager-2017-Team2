@@ -1,7 +1,9 @@
 import org.newdawn.slick.*;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.GameContainer;
-import java.lang.Object.*
+import java.lang.Object.*;
+import org.newdawn.slick.gui.TextField;
+
 
 /**
  * Created by Jako on 18/03/17.
@@ -11,9 +13,6 @@ public class Money {
 
 
     public Money() throws SlickException {
-
-    }
-    public void init(){
 
     }
 
