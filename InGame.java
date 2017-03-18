@@ -29,13 +29,14 @@ public class InGame extends BasicGameState {
 
     public void update(GameContainer gc, StateBasedGame sbg, int Delta) throws SlickException{
         Input inp = gc.getInput();
+        hero.update(gc,Delta);
         System.out.println(camera_x+" "+camera_y+" "+edge_break);
         float mousex = inp.getMouseX();
         float mousey = inp.getMouseY();
         delta2 = Delta;
         if (mousex >  screen_w-edge_break) {
-            camera_x += delta2*speed*(edge_break/mousex);
-        }
+            camera_x += delta2*speed;
+    }
         if (mousey >  screen_h-edge_break) {
             camera_y += delta2*speed;
         }
@@ -43,7 +44,7 @@ public class InGame extends BasicGameState {
             camera_x -= delta2*speed;
         }
         if (mousey < edge_break) {
-            camera_y -= delta2 * speed;
+            camera_y -= delta2*speed;
         }
 
     }
