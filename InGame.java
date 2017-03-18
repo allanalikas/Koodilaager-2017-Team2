@@ -7,7 +7,7 @@ public class InGame extends BasicGameState {
 
     int camera_x = -50 ;
     int camera_y = -60 ;
-    float speed = 1.5f;
+    float speed = 1.0f;
     int edge_break = 50;
 
     WorldMap wmap;
@@ -33,21 +33,7 @@ public class InGame extends BasicGameState {
         float mousex = inp.getMouseX();
         float mousey = inp.getMouseY();
         delta2 = Delta;
-        if (mousex >  screen_w-edge_break) {
-            camera_x += delta2*speed;
     }
-        if (mousey >  screen_h-edge_break) {
-            camera_y += delta2*speed;
-        }
-        if (mousex < edge_break){
-            camera_x -= delta2*speed;
-        }
-        if (mousey < edge_break) {
-            camera_y -= delta2*speed;
-        }
-
-    }
-
     public void mouseMoved(int oldx,int oldy,int newx,int newy){
 
 
