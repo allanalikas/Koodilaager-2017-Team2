@@ -1,20 +1,21 @@
 import org.newdawn.slick.state.*;
+import java.awt.MouseInfo;
 import org.newdawn.slick.*;
 
 
 public class InGame extends BasicGameState {
 
-    int camera_x = -50 ;
-    int camera_y = -60 ;
+    int camera_x = 0 ;
+    int camera_y = 0 ;
 
     WorldMap wmap;
     Hero hero;
 
     public void init(GameContainer gc, StateBasedGame sbg) throws SlickException{
         wmap = new WorldMap();
-        hero = new Hero(50, 50);
+        hero = new Hero();
     }
-    public void update(GameContainer gc, StateBasedGame sbg, int Delta) throws SlickException{
+    public void update(GameContainer gc, StateBasedGame sbg, int delta) throws SlickException{
 
     }
 
