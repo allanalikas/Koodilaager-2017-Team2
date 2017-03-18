@@ -11,6 +11,7 @@ public class InGame extends BasicGameState {
     WorldMap wmap;
     Hero hero;
     Camera main_camera;
+    Money money;
 
     int screen_w;
     int screen_h;
@@ -18,6 +19,7 @@ public class InGame extends BasicGameState {
     public void init(GameContainer gc, StateBasedGame sbg) throws SlickException{
         wmap = new WorldMap();
         hero = new Hero();
+        money = new Money();
         main_camera = new Camera(gc.getWidth(),gc.getHeight());
         System.out.println(screen_w);
     }
@@ -37,6 +39,7 @@ public class InGame extends BasicGameState {
     public void render(GameContainer gc, StateBasedGame sbg, Graphics g) throws SlickException{
         wmap.render(gc, g,main_camera.x,main_camera.y, map_height, map_width, tilesize);
         hero.render(gc, g,main_camera.x,main_camera.y);
+        money.render(gc, g);
     }
 
     public void mousePressed(int button, int mx, int my) {

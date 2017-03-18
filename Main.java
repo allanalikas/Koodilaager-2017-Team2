@@ -22,6 +22,7 @@ public class Main extends StateBasedGame {
     public void initStatesList(GameContainer gc) throws SlickException {
         this.addState(new InGame());
         hero = new Hero();
+
     }
 
     public static void main(String[] args) {
@@ -29,7 +30,7 @@ public class Main extends StateBasedGame {
         try
         {
             AppGameContainer appgc;
-            appgc = new AppGameContainer(new Main("TEAM1"));
+            appgc = new AppGameContainer(new Main(""));
             appgc.setDisplayMode(screenW, screenH, false);
             appgc.start();
         }

@@ -2,9 +2,6 @@ import org.newdawn.slick.*;
 import org.newdawn.slick.Color;
 import org.newdawn.slick.Graphics;
 
-import java.awt.*;
-import java.awt.event.MouseEvent;
-
 /**
  * Created by koodilaager on 18.03.2017.
  */
