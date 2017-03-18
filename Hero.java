@@ -50,7 +50,7 @@ public class Hero{
                 mouse_Y = inp.getMouseY() + camera_y;
             }
         }
-        
+
         float dy = (mouse_Y - pos_y) / ((float) Math.sqrt((float) Math.pow(mouse_X - pos_x, 2) + (float) Math.pow(mouse_Y - pos_y, 2)) / speed);
         float dx = (mouse_X - pos_x) / ((float) Math.sqrt((float) Math.pow(mouse_X - pos_x, 2) + (float) Math.pow(mouse_Y - pos_y, 2)) / speed);
         System.out.println(pos_x +" "+ map_width);
@@ -66,17 +66,6 @@ public class Hero{
 
              }
          }
-
-        if (Math.round((int)mouse_X) != Math.round((int)pos_x)) {
-            float dx = (mouse_X - pos_x) / ((float) Math.sqrt((float) Math.pow(mouse_X - pos_x, 2) + (float) Math.pow(mouse_Y - pos_y, 2)) / speed);
-            pos_x = pos_x + dx;
-        }
-        if (Math.round((int)mouse_Y) != Math.round((int)pos_y)) {
-            float dy = (mouse_Y - pos_y) / ((float) Math.sqrt((float) Math.pow(mouse_X - pos_x, 2) + (float) Math.pow(mouse_Y - pos_y, 2)) / speed);
-            pos_y = pos_y + dy;
-        }
-
->>>>>>> 1de548d90a6b21cc0022d66fb8cd365431d69d6c
 
         }
     public void render(GameContainer gc, Graphics g, float camera_x, float camera_y){
