@@ -25,7 +25,6 @@ public class Money {
 
     public void render(GameContainer gc, Graphics g){
         g.drawImage(img, 950, 0);
-        g.setText()
     }
 
 }
