@@ -51,22 +51,18 @@ public class Hero{
             }
         }
 
-        if (Math.round(mouse_X) != Math.round(pos_x)) {
+        if (Math.round((int)mouse_X) != Math.round((int)pos_x)) {
             float dx = (mouse_X - pos_x) / ((float) Math.sqrt((float) Math.pow(mouse_X - pos_x, 2) + (float) Math.pow(mouse_Y - pos_y, 2)) / speed);
             pos_x = pos_x + dx;
         }
-        if (Math.round(mouse_Y) != Math.round(pos_y)) {
+        if (Math.round((int)mouse_Y) != Math.round((int)pos_y)) {
             float dy = (mouse_Y - pos_y) / ((float) Math.sqrt((float) Math.pow(mouse_X - pos_x, 2) + (float) Math.pow(mouse_Y - pos_y, 2)) / speed);
             pos_y = pos_y + dy;
         }
 
 
         }
-<<<<<<< HEAD
-    public void render(GameContainer gc, Graphics g, int camera_x, int camera_y){
-=======
-    public void render (GameContainer gc, Graphics g, float camera_x, float camera_y){
->>>>>>> c53d63570d1a221cacdbe1f39323d3bd83063b4a
+    public void render(GameContainer gc, Graphics g, float camera_x, float camera_y){
 
         g.setColor(new Color(255, 255, 30));
         g.fillRect(pos_x - camera_x , pos_y - camera_y, box_width, box_height);

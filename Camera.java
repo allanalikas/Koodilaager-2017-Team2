@@ -9,7 +9,7 @@ import org.newdawn.slick.*;
 public class Camera {
     float x = -50 ;
     float y = -60 ;
-    float speed = 0.01f;
+    float speed = 1.5f;
     float edge_break = 50;
 
     int screen_w;
