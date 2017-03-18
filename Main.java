@@ -13,6 +13,7 @@ public class Main extends StateBasedGame {
 
     public static int screenW = 1000;
     public static int screenH = 600;
+    Hero hero;
 
     public Main(String AppName){
         super(AppName);
@@ -20,6 +21,7 @@ public class Main extends StateBasedGame {
 
     public void initStatesList(GameContainer gc) throws SlickException {
         this.addState(new InGame());
+        hero = new Hero();
     }
 
     public static void main(String[] args) {
