@@ -28,6 +28,7 @@ public class WorldMap  {
         }
         colortable.put(0, new Color(10, 200, 30));
         colortable.put(1, new Color(20, 195, 35));
+        colortable.put(2, new Color(0,0,0));
 
         for (int i = 0; i < mapheight; i++) {
             for (int j = 0; j < mapwidth; j++) {
@@ -36,6 +37,11 @@ public class WorldMap  {
                         i * tilesize - camera_y,
                         tilesize,
                         tilesize);
+                g.setColor(colortable.get(2));
+                g.fillRect(j * tilesize - camera_x,
+                        i * tilesize - camera_y,
+                        tilesize-1,
+                        tilesize-1);
             }
         }
 

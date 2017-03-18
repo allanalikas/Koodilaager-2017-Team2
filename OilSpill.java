@@ -7,30 +7,29 @@ import org.newdawn.slick.Graphics;
  */
 public class OilSpill {
 
-    float OilSpillX = 60;
-    float OilSpillY = 50;
+    float pos_x = 60;
+    float pos_y = 50;
     float MoneyLeft;
     float radius;
     float id;
 
 
-    public void oil () {}
-
-    public OilSpill(float _x, float _y, int _id) {
-        OilSpillX = _x;
-        OilSpillY = _y;
+    /*public void oil () {}
+    pulic OilSpill(float _x, float _y, int _id) {
+        pos_x = _x;
+        pos_y = _y;
     }
-
+*/
     public void update (GameContainer gc, int delta) {
 
 
 
     }
 
-    public void render (GameContainer gc, Graphics g, float OilSpillX, float OilSpillY) {
+    public void render (GameContainer gc, Graphics g, float camera_x, float camera_y) {
 
-        g.setColor(new Color(0, 0, 0));
-        g.fillOval(200, 200, 30,  30);
+        g.setColor(new Color(255, 255, 255));
+        g.fillOval(pos_x - camera_x , pos_y - camera_y, 50, 50);
 
     }
 }
