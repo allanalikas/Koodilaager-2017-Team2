@@ -50,15 +50,15 @@ public class Hero{
 
         float dy = (mouse_Y - pos_y) / ((float) Math.sqrt((float) Math.pow(mouse_X - pos_x, 2) + (float) Math.pow(mouse_Y - pos_y, 2)) / speed);
         float dx = (mouse_X - pos_x) / ((float) Math.sqrt((float) Math.pow(mouse_X - pos_x, 2) + (float) Math.pow(mouse_Y - pos_y, 2)) / speed);
-        System.out.println(pos_x +" "+ map_width);
+
          if(pos_x +  dx > 0. && pos_x < map_width * tilesize) {
-             if (mouse_X != pos_x) {
+             if (Math.round(mouse_X) != Math.round(pos_x)) {
                  pos_x = pos_x + dx;
              }
          }
-         System.out.println(pos_y +" "+ map_height);
+
          if(pos_y + dy> 0 && pos_y < map_height * tilesize) {
-             if (mouse_Y != pos_y) {
+             if (Math.round(mouse_Y) != Math.round(pos_y)) {
                  pos_y = pos_y + dy;
 
              }

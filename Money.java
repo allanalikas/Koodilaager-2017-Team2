@@ -1,6 +1,7 @@
 import org.newdawn.slick.*;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.GameContainer;
+import java.lang.Object.*
 
 /**
  * Created by Jako on 18/03/17.
@@ -23,7 +24,8 @@ public class Money {
     }
 
     public void render(GameContainer gc, Graphics g){
-        g.drawImage(img, 0, 0, 0, 0, 200, 100);
+        g.drawImage(img, 950, 0);
+        g.setText()
     }
 
 }
