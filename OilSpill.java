@@ -7,19 +7,19 @@ import org.newdawn.slick.Graphics;
  */
 public class OilSpill {
 
-    float pos_x = 60;
-    float pos_y = 50;
+    float pos_x;
+    float pos_y;
     float MoneyLeft;
     float radius;
     float id;
 
 
-    /*public void oil () {}
-    pulic OilSpill(float _x, float _y, int _id) {
+    public OilSpill(float _x, float _y, int _id) {
         pos_x = _x;
         pos_y = _y;
+        id = _id;
     }
-*/
+
     public void update (GameContainer gc, int delta) {
 
 

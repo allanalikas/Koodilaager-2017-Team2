@@ -21,7 +21,7 @@ public class InGame extends BasicGameState {
     public void init(GameContainer gc, StateBasedGame sbg) throws SlickException{
         wmap = new WorldMap();
         hero = new Hero();
-        oilspill = new OilSpill();
+        oilspill = new OilSpill(24, 24, 0);
         money = new Money();
         main_camera = new Camera(gc.getWidth(),gc.getHeight());
         npc = new NPC();
