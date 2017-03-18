@@ -24,9 +24,7 @@ public class Main extends StateBasedGame {
         this.addState(new InGame());
         hero = new Hero();
         oilspill = new OilSpill();
-        //for (int i = 0; i <= 10; i++) {
-        //    oil
-        //}
+
     }
 
     public static void main(String[] args) {
@@ -34,7 +32,7 @@ public class Main extends StateBasedGame {
         try
         {
             AppGameContainer appgc;
-            appgc = new AppGameContainer(new Main("TEAM1"));
+            appgc = new AppGameContainer(new Main(""));
             appgc.setDisplayMode(screenW, screenH, false);
             appgc.start();
         }

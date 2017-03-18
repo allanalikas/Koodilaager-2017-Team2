@@ -12,6 +12,7 @@ public class InGame extends BasicGameState {
     Hero hero;
     OilSpill oilspill;
     Camera main_camera;
+    Money money;
     NPC npc;
 
     int screen_w;
@@ -21,6 +22,7 @@ public class InGame extends BasicGameState {
         wmap = new WorldMap();
         hero = new Hero();
         oilspill = new OilSpill();
+        money = new Money();
         main_camera = new Camera(gc.getWidth(),gc.getHeight());
         npc = new NPC();
         System.out.println(screen_w);
@@ -42,6 +44,7 @@ public class InGame extends BasicGameState {
         wmap.render(gc, g,main_camera.x,main_camera.y, map_height, map_width, tilesize);
         hero.render(gc, g,main_camera.x,main_camera.y);
         oilspill.render(gc, g, main_camera.x, main_camera.y);
+        money.render(gc, g);
         npc.render(gc, g,main_camera.x,main_camera.y);
     }
 

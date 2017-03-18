@@ -30,6 +30,7 @@ public class NPC {
 
     }
 */
+
     public void render (GameContainer gc, Graphics g, float camera_x, float camera_y) {
         g.setColor(new Color(255, 60, 30));
         g.fillRect(pos_x - camera_x , pos_y - camera_y, 40, 45);
