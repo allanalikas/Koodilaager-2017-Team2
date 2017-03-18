@@ -29,6 +29,14 @@ public class Money {
         String txt = new String(Integer.toString(Math.round(i)));
         g.setColor(Color.white);
         if (sum > 0) {
+            g.setColor(Color.green);
+            g.translate(0, 0);
+            g.scale(2, 2);
+            g.drawString(txt, 425, 2);
+            g.resetTransform();
+        }
+        if (sum < 0) {
+            g.setColor(Color.red);
             g.translate(0, 0);
             g.scale(2, 2);
             g.drawString(txt, 425, 2);
