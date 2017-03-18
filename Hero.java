@@ -22,7 +22,7 @@ public class Hero extends {
     public void update(GameContainer gc, int delta) {
 
         Input inp = gc.getInput();
-        float dx =  speed * delta;
+        float dx = speed * delta;
         float dy = speed * delta;
         float mouse_X = inp.getMouseX();
         float mouse_y = inp.getMouseY();
