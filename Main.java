@@ -1,3 +1,8 @@
+/*
+Koodilaager 18.03.2017
+Team: Karl, Allan, Caspar
+
+*/
 import org.newdawn.slick.*;
 import org.newdawn.slick.state.StateBasedGame;
 
