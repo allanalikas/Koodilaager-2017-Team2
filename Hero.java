@@ -13,7 +13,7 @@ public class Hero{
     float pos_x = 70;
     float pos_y = 100;
 
-    float speed = 1;
+    float speed = 1.5f;
 
     float mouse_X = pos_x;
     float mouse_Y = pos_y;
