@@ -7,7 +7,7 @@ public class InGame extends BasicGameState {
 
     int camera_x = -50 ;
     int camera_y = -60 ;
-    float speed = 1.0f;
+    float speed = 1.5f;
     int edge_break = 50;
 
     WorldMap wmap;
@@ -30,7 +30,6 @@ public class InGame extends BasicGameState {
     public void update(GameContainer gc, StateBasedGame sbg, int Delta) throws SlickException{
         Input inp = gc.getInput();
         hero.update(gc,Delta,camera_x,camera_y);
-        System.out.println(camera_x+" "+camera_y+" "+edge_break);
         float mousex = inp.getMouseX();
         float mousey = inp.getMouseY();
         delta2 = Delta;

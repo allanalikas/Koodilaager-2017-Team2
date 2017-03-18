@@ -13,7 +13,7 @@ public class Hero {
     float pos_x = 70;
     float pos_y = 100;
 
-    float speed = 1;
+    float speed = 1.5f;
     float direction = 0; //  ?? 0-up, 1-right, 2-down, 4-left??
 
     float mouse_X = pos_x;

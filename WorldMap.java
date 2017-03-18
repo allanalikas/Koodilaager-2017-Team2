@@ -15,8 +15,8 @@ public class WorldMap {
 
 
     public WorldMap() {
-        mapheight = 20;
-        mapwidth = 10;
+        mapheight = 100;
+        mapwidth = 100;
 
         maptiles = new int[mapheight][mapwidth];
 
