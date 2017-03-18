@@ -21,7 +21,7 @@ public class Hero {
     public Hero (){}
 
 
-    public void update(GameContainer gc, int delta) {
+    public void update(GameContainer gc, int delta, int camera_x, int camera_y) {
         Input inp = gc.getInput();
 
 
@@ -36,7 +36,7 @@ public class Hero {
         }
 
         if (mouse_X != pos_x) {
-            float dx = (mouse_X - pos_x) / ((float) Math.sqrt((float) Math.pow(mouse_X - pos_x, 2) + (float) Math.pow(mouse_Y - pos_y, 2)) / speed);
+            float dx = (mouse_X - pos_x- camera_x) / ((float) Math.sqrt((float) Math.pow(mouse_X - pos_x - camera_x, 2) + (float) Math.pow(mouse_Y - pos_y - camera_y, 2)) / speed);
             pos_x = pos_x + dx;
         }
         if (mouse_X != pos_x) {
@@ -45,14 +45,11 @@ public class Hero {
         }
 
 
-
-
-
         }
-    public void render (GameContainer gc, Graphics g, int camera_x, int camera_y){
+    public void render (GameContainer gc, Graphics g){
 
         g.setColor(new Color(255, 255, 30));
-        g.fillRect(pos_x, pos_y, 40, 45);
+        g.fillRect(pos_x , pos_y, 40, 45);
     }
 
 }
