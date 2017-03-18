@@ -7,11 +7,10 @@ import org.newdawn.slick.*;
  * Created by karl_ on 18/03/2017.
  */
 public class Camera {
-    float x = -50 ;
-    float y = -60 ;
-    float speed = 1.5f;
     float edge_break = 50;
-
+    float x = 0 ;
+    float y = 0 ;
+    float speed = 1.5f;
     int screen_w;
     int screen_h;
     public Camera(int screen_w, int screen_h){
@@ -20,21 +19,33 @@ public class Camera {
     }
     public void update(float mousex, float mousey, int map_height, int map_width, int tilesize,int Delta){
         //System.out.println(x+" "+y+" "+mousex+" "+mousey+" "+screen_w+" "+screen_h);
-        if (mousex == map_width*tilesize || mousex == 0 || mousey == 0 || mousey == map_height*tilesize){
-            return;
-        }else {
+
+
             if (mousex > screen_w - edge_break) {
-                x += Delta * speed;
+                if (x + Delta * speed> map_width*tilesize-screen_w){
+                }else {
+                    x += Delta * speed;
+                }
             }
             if (mousey > screen_h - edge_break) {
-                y += Delta * speed;
+                if (y + Delta * speed > map_height*tilesize-screen_h) {
+                }else{
+                    y += Delta * speed;
+                }
+
             }
             if (mousex < edge_break) {
-                x -= Delta * speed;
+                if (x - Delta * speed< 0) {
+                }else {
+                    x -= Delta * speed;
+                }
             }
-            if (mousey < edge_break) {
-                y -= Delta * speed;
+            if (mousey - Delta * speed < edge_break) {
+                if (y < 0){
+                }else {
+                    y -= Delta * speed;
+                }
             }
-        }
+
     }
 }
