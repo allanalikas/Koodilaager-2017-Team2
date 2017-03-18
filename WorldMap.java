@@ -16,7 +16,7 @@ public class WorldMap  {
     public WorldMap() {
     }
 
-    public void render(GameContainer gc, Graphics g, int camera_x, int camera_y, int mapheight, int mapwidth, int tilesize){
+    public void render(GameContainer gc, Graphics g, float camera_x, float camera_y, int mapheight, int mapwidth, int tilesize){
 
 
         maptiles = new int[mapheight][mapwidth];
