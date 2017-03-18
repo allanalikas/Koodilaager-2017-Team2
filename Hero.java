@@ -23,7 +23,7 @@ public class Hero{
     public Hero (){}
 
 
-    public void update(GameContainer gc, int delta, int camera_x, int camera_y, int map_height, int map_width, int tilesize) {
+    public void update(GameContainer gc, int delta, float camera_x, float camera_y, int map_height, int map_width, int tilesize) {
         Input inp = gc.getInput();
 
         int height = map_height * tilesize;
@@ -62,7 +62,11 @@ public class Hero{
 
 
         }
+<<<<<<< HEAD
     public void render(GameContainer gc, Graphics g, int camera_x, int camera_y){
+=======
+    public void render (GameContainer gc, Graphics g, float camera_x, float camera_y){
+>>>>>>> c53d63570d1a221cacdbe1f39323d3bd83063b4a
 
         g.setColor(new Color(255, 255, 30));
         g.fillRect(pos_x - camera_x , pos_y - camera_y, box_width, box_height);
