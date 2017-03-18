@@ -16,28 +16,43 @@ public class Hero {
     float speed = 1;
     float direction = 0; //  ?? 0-up, 1-right, 2-down, 4-left??
 
-    public Hero (){
-    }
+    float mouse_X = pos_x;
+    float mouse_Y = pos_y;
+    public Hero (){}
+
 
     public void update(GameContainer gc, int delta) {
-
         Input inp = gc.getInput();
-        float dx = speed * delta;
-        float dy = speed * delta;
-        float mouse_X = inp.getMouseX();
-        float mouse_Y = inp.getMouseY();
+
 
         if (inp.isMousePressed(0b0)) {
+            mouse_X = inp.getMouseX();
+            mouse_Y = inp.getMouseY();
             System.out.print(mouse_X);
             System.out.print(" - ");
             System.out.println(mouse_Y);
+
+            System.out.println("munni");
         }
+
+        if (mouse_X != pos_x) {
+            float dx = (mouse_X - pos_x) / ((float) Math.sqrt((float) Math.pow(mouse_X - pos_x, 2) + (float) Math.pow(mouse_Y - pos_y, 2)) / speed);
+            pos_x = pos_x + dx;
+        }
+        if (mouse_X != pos_x) {
+            float dy = (mouse_Y - pos_y) / ((float) Math.sqrt((float) Math.pow(mouse_X - pos_x, 2) + (float) Math.pow(mouse_Y - pos_y, 2)) / speed);
+            pos_y = pos_y + dy;
+        }
+
+
+
+
 
         }
     public void render (GameContainer gc, Graphics g, int camera_x, int camera_y){
 
         g.setColor(new Color(255, 255, 30));
-        g.fillRect (pos_x, pos_y, 40, 45);
+        g.fillRect(pos_x, pos_y, 40, 45);
     }
 
 }
