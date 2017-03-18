@@ -25,9 +25,12 @@ public class Hero {
         float dx = speed * delta;
         float dy = speed * delta;
         float mouse_X = inp.getMouseX();
-        float mouse_y = inp.getMouseY();
-        if (inp.isMousePressed(1)) {
+        float mouse_Y = inp.getMouseY();
 
+        if (inp.isMousePressed(0b0)) {
+            System.out.print(mouse_X);
+            System.out.print(" - ");
+            System.out.println(mouse_Y);
         }
 
         }
