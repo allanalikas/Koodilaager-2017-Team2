@@ -23,7 +23,8 @@ public class Main extends StateBasedGame {
     public void initStatesList(GameContainer gc) throws SlickException {
         this.addState(new InGame());
         hero = new Hero();
-        oilspill = new OilSpill(240, 240, 0);
+        oilspill = new OilSpill(170, 190, 0);
+
 
     }
 

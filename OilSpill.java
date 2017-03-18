@@ -18,6 +18,12 @@ public class OilSpill {
         pos_x = _x;
         pos_y = _y;
         id = _id;
+
+        /*if (id == 0){
+            pos_x = Math.random();
+            pos_y = Math.random();
+        }*/
+
     }
 
     public void update (GameContainer gc, int delta) {
@@ -26,10 +32,10 @@ public class OilSpill {
 
     }
 
-    public void render (GameContainer gc, Graphics g, float camera_x, float camera_y) {
+    public void render (GameContainer gc, Graphics g, float camera_x, float camera_y, float radius) {
 
         g.setColor(new Color(255, 255, 255));
-        g.fillOval(pos_x - camera_x , pos_y - camera_y, 50, 50);
+        g.fillOval(pos_x - camera_x , pos_y - camera_y, 40, 40);
 
     }
 }
