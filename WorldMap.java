@@ -5,19 +5,21 @@ import org.newdawn.slick.Graphics;
 /**
  * Created by koodilaager on 18.03.2017.
  */
-public class WorldMap {
+public class WorldMap  {
     int mapheight ;
     int mapwidth ;
 
-    public final int tilesize = 50;
 
-    int [][] maptiles;
+    //int [][] maptiles;
 
 
     public WorldMap() {
-        mapheight = 20;
-        mapwidth = 10;
+    }
 
+    public void render(GameContainer gc, Graphics g, int camera_x, int camera_y, int mapheight, int mapwidth, int tilesize){
+        //mapheight = 20;
+        //mapwidth = 10;
+        int [][] maptiles;
         maptiles = new int[mapheight][mapwidth];
 
         for (int i = 0; i < mapheight; i++) {
@@ -25,8 +27,6 @@ public class WorldMap {
                 maptiles[i][j] = 0;
             }
         }
-    }
-    public void render(GameContainer gc, Graphics g, int camera_x, int camera_y){
 
         for (int i = 0; i < mapheight; i++) {
             for (int j = 0; j < mapwidth; j++) {
@@ -38,4 +38,5 @@ public class WorldMap {
             }
         }
     }
+
 }

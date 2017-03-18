@@ -8,31 +8,24 @@ import java.awt.event.MouseEvent;
 /**
  * Created by koodilaager on 18.03.2017.
  */
-public class Hero {
+public class Hero{
 
     float pos_x = 70;
     float pos_y = 100;
 
     float speed = 1;
-    float direction = 0; //  ?? 0-up, 1-right, 2-down, 4-left??
 
     float mouse_X = pos_x;
     float mouse_Y = pos_y;
     public Hero (){}
 
 
-    public void update(GameContainer gc, int delta, int camera_x, int camera_y) {
+    public void update(GameContainer gc, int delta, int camera_x, int camera_y, int map_height, int map_width, int tilesize) {
         Input inp = gc.getInput();
 
-
-        if (inp.isMousePressed(0b0)) {
+        if (inp.isMousePressed(0b1)) {
             mouse_X = inp.getMouseX() + camera_x;
             mouse_Y = inp.getMouseY()+ camera_y;
-            System.out.print(mouse_X);
-            System.out.print(" - ");
-            System.out.println(mouse_Y);
-
-            System.out.println("munni");
         }
 
         if (mouse_X != pos_x) {

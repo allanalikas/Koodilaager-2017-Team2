@@ -10,6 +10,10 @@ public class InGame extends BasicGameState {
     float speed = 1.0f;
     int edge_break = 50;
 
+    int map_height = 40;
+    int map_width = 40;
+    int tilesize = 50;
+
     WorldMap wmap;
     Hero hero;
 
@@ -29,7 +33,7 @@ public class InGame extends BasicGameState {
 
     public void update(GameContainer gc, StateBasedGame sbg, int Delta) throws SlickException{
         Input inp = gc.getInput();
-        hero.update(gc,Delta,camera_x,camera_y);
+        hero.update(gc,Delta,camera_x,camera_y, map_height, map_width, tilesize);
         System.out.println(camera_x+" "+camera_y+" "+edge_break);
         float mousex = inp.getMouseX();
         float mousey = inp.getMouseY();
@@ -54,7 +58,7 @@ public class InGame extends BasicGameState {
 
     }
     public void render(GameContainer gc, StateBasedGame sbg, Graphics g) throws SlickException{
-        wmap.render(gc, g,camera_x,camera_y);
+        wmap.render(gc, g,camera_x,camera_y, map_height, map_width, tilesize);
         hero.render(gc, g,camera_x,camera_y);
     }
 
