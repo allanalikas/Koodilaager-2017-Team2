@@ -16,7 +16,6 @@ public class InGame extends BasicGameState {
         hero = new Hero();
     }
     public void update(GameContainer gc, StateBasedGame sbg, int delta) throws SlickException{
-        hero.update(gc, delta);
     }
 
     public void render(GameContainer gc, StateBasedGame sbg, Graphics g) throws SlickException{
