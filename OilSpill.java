@@ -35,7 +35,7 @@ public class OilSpill {
     public void render (GameContainer gc, Graphics g, float camera_x, float camera_y, float radius) {
 
         g.setColor(new Color(255, 255, 255));
-        g.fillOval(pos_x - camera_x , pos_y - camera_y, 40, 40);
+        g.fillOval(pos_x - camera_x , pos_y - camera_y, 50, 50);
 
     }
 }
