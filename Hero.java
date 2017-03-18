@@ -8,7 +8,7 @@ import java.awt.event.MouseEvent;
 /**
  * Created by koodilaager on 18.03.2017.
  */
-public class Hero extends {
+public class Hero {
 
     float pos_x = 70;
     float pos_y = 100;
