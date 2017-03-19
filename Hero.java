@@ -6,7 +6,7 @@ import org.newdawn.slick.Graphics;
  * Created by koodilaager on 18.03.2017.
  */
 public class Hero{
-    OilSpill oil = new OilSpill(0,0,0);
+
     float pos_x = 70;
     float pos_y = 100;
 
@@ -17,8 +17,7 @@ public class Hero{
 
     float mouse_X = pos_x;
     float mouse_Y = pos_y;
-    public Hero (){
-    }
+    public Hero (){}
 
 
     public void update(GameContainer gc, int delta, float camera_x, float camera_y, int map_height, int map_width, int tilesize) {
@@ -64,7 +63,7 @@ public class Hero{
 
              }
          }
-        oil.update(gc, delta, pos_x, pos_y);
+
         }
     public void render(GameContainer gc, Graphics g, float camera_x, float camera_y){
 

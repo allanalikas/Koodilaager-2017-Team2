@@ -1,6 +1,8 @@
 import org.newdawn.slick.*;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.GameContainer;
+import java.lang.Object.*;
+import org.newdawn.slick.gui.TextField;
 
 
 /**
@@ -8,7 +10,7 @@ import org.newdawn.slick.GameContainer;
  */
 public class Money {
     Image img = new Image("images/money.png");
-    float i = 2000;
+
 
     public Money() throws SlickException {
 
@@ -20,35 +22,8 @@ public class Money {
 
     }
 
-    public void render(GameContainer gc, Graphics g, int pos_y, int pos_x, int sum){
-
+    public void render(GameContainer gc, Graphics g){
         g.drawImage(img, 950, 0);
-
-        String txt = new String(Integer.toString(Math.round(i)));
-
-        if (sum > 0) {
-            i = i + sum;
-            g.setColor(Color.green);
-            g.translate(0, 0);
-            g.scale(2, 2);
-            g.drawString(txt, 425, 2);
-            g.resetTransform();
-        }
-        else if (sum < 0) {
-            i = i + sum;
-            g.setColor(Color.red);
-            g.translate(0, 0);
-            g.scale(2, 2);
-            g.drawString(txt, 425, 2);
-            g.resetTransform();
-        }
-        else {
-            g.setColor(Color.white);
-            i = i - 0.1f;
-            g.scale(1,1);
-            g.drawString(txt, 900, 15);
-        }
-
     }
 
 }
