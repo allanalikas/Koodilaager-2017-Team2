@@ -1,38 +1,38 @@
+import jdk.nashorn.internal.objects.Global;
 import org.newdawn.slick.Color;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
+import org.newdawn.slick.SlickException;
 
 /**
  * Created by koodilaager on 18.03.2017.
  */
 public class OilSpill {
 
-    float pos_x;
-    float pos_y;
+    int pos_x = (int)(Math.random()*2000);
+    int pos_y = (int)(Math.random()*2000);
     float MoneyLeft;
     float radius;
     float id;
-
+    float hero_xx, hero_yy;
+    Money money;
 
     public OilSpill(float _x, float _y, int _id) {
-        pos_x = _x;
-        pos_y = _y;
-        id = _id;
+    }
 
-        /*if (id == 0){
-            pos_x = Math.random();
-            pos_y = Math.random();
-        }*/
+    public void update (GameContainer gc, int delta, float hero_x, float hero_y) {
+        hero_xx = hero_x;
+        hero_yy = hero_y;
 
     }
 
-    public void update (GameContainer gc, int delta) {
-
-
-
-    }
-
-    public void render (GameContainer gc, Graphics g, float camera_x, float camera_y, float radius) {
+    public void render (GameContainer gc, Graphics g, float camera_x, float camera_y, float radius) throws SlickException {
+        if ((pos_x - 25 < hero_xx) && (hero_xx < pos_x + 25)){
+            pos_x = (int)(Math.random()*2000);
+            pos_y = (int)(Math.random()*2000);
+            money = new Money();
+            money.render(gc, g, pos_y, pos_x, (int)Math.random());
+        }
 
         g.setColor(new Color(255, 255, 255));
         g.fillOval(pos_x - camera_x , pos_y - camera_y, 50, 50);

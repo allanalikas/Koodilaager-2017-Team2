@@ -1,8 +1,6 @@
 import org.newdawn.slick.*;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.GameContainer;
-import java.lang.Object.*;
-import org.newdawn.slick.gui.TextField;
 
 
 /**
@@ -22,7 +20,7 @@ public class Money {
 
     }
 
-    public void render(GameContainer gc, Graphics g, int sum){
+    public void render(GameContainer gc, Graphics g, int pos_y, int pos_x, int sum){
 
         g.drawImage(img, 950, 0);
         i = i - 0.1f;
