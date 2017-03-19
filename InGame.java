@@ -7,9 +7,10 @@ public class InGame extends BasicGameState {
     int map_height = 40;
     int map_width = 40;
     int tilesize = 50;
-
+    float radius;
     WorldMap wmap;
     Hero hero;
+    OilSpill oilspill;
     Camera main_camera;
     Money money;
     NPC npc;
@@ -21,6 +22,7 @@ public class InGame extends BasicGameState {
     public void init(GameContainer gc, StateBasedGame sbg) throws SlickException{
         wmap = new WorldMap();
         hero = new Hero();
+        oilspill = new OilSpill(400, 400, 0);
         money = new Money();
         main_camera = new Camera(gc.getWidth(),gc.getHeight());
         npc = new NPC();
@@ -45,7 +47,8 @@ public class InGame extends BasicGameState {
     public void render(GameContainer gc, StateBasedGame sbg, Graphics g) throws SlickException{
         wmap.render(gc, g,main_camera.x,main_camera.y, map_height, map_width, tilesize);
         hero.render(gc, g,main_camera.x,main_camera.y);
-        money.render(gc, g);
+        money.render(gc, g, 10);
+        oilspill.render(gc, g, main_camera.x, main_camera.y, radius);
         npc.render(gc, g,main_camera.x,main_camera.y);
     }
 
