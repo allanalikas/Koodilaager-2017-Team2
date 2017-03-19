@@ -42,6 +42,10 @@ public class InGame extends BasicGameState {
     public void render(GameContainer gc, StateBasedGame sbg, Graphics g) throws SlickException{
         wmap.render(gc, g,main_camera.x,main_camera.y, map_height, map_width, tilesize);
         hero.render(gc, g,main_camera.x,main_camera.y);
+<<<<<<< HEAD
+=======
+        money.render(gc, g, 10);
+>>>>>>> 629e9b2b1a91e5ea8c3ac5a93a8e781585d7b033
         oilspill.render(gc, g, main_camera.x, main_camera.y, radius);
         npc.render(gc, g,main_camera.x,main_camera.y);
     }
